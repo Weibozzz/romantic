@@ -25,4 +25,3 @@ http://www.wxs231.cn/loveSource/loveshow05/index.html
 http://www.wxs231.cn/loveSource/love-ppt/
 
 
-事了拂衣去，深藏功与名。
