@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="renderer" content="webkit" />
+		<meta http-equiv="description" content="糖宝的纪念日" />
+		<meta name="Keywords" content="糖宝的纪念日" />
+		<meta name="Description" content="糖宝的纪念日" />
+		<meta name="author" content="糖宝的纪念日" />
+
+		<title>糖宝的纪念日</title>
+		<link href="css/font/jquery-letterfx.css" rel="stylesheet" type="text/css" />
+		<link href="css/font/demo.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/fullPage-2.5.2/jquery.fullPage.css" />
+		<link rel="stylesheet" href="css/Snowfall-1.7/styles.css" />
+		<link rel="icon" href="./images/heart.png" />
+		<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/fullPage.js/2.5.2/jquery.fullPage.min.js"></script>
+		<script src="js/Snowfall-1.7/snowfall.min.jquery.js"></script>
+		<script src="https://cdn.bootcss.com/fullPage.js/2.5.2/vendors/jquery.easings.min.js"></script>
+
+
+		<link type="text/css" rel="stylesheet" href="css/default.css">
+		<!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
+		<script type="text/javascript" src="js/jscex.min.js"></script>
+		<script type="text/javascript" src="js/jscex-parser.js"></script>
+		<script type="text/javascript" src="js/jscex-jit.js"></script>
+		<script type="text/javascript" src="js/jscex-builderbase.min.js"></script>
+		<script type="text/javascript" src="js/jscex-async.min.js"></script>
+		<script type="text/javascript" src="js/jscex-async-powerpack.min.js"></script>
+		<script type="text/javascript" src="js/functions.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/love.js" charset="utf-8"></script>
+
+		<!--全屏滚动效果-->
+        <script src="js/fullPage-2.5.2/index.js"></script>
+        <link rel="stylesheet" href="css/fullPage-2.5.2/index.css">
+
+        <link rel="stylesheet" href="css/tb/tb.css">
+
+
+
+		<script src="js/font/tuxsudo.min.js"></script>
+		<script src="js/font/jquery-letterfx.js"></script>
+		<script src="js/font/demo.js"></script>
+
+        <!--<link rel="stylesheet" href="css/3d/3d.css">-->
+        <!--<script src="js/3d/three.min.js"></script>-->
+        <!--<script src="js/3d/tween.min.js"></script>-->
+        <style>
+			html,body{
+				user-select:none;
+			}
+            #menuPage { margin: 0; padding: 0; position: fixed; left: 10px; top: -30px; list-style-type: none; z-index: 70;transition: all .5s}
+			#menuPageTip{ margin: 0; padding: 0;width: 100%;height: 40px; position: fixed; left: 10px; top: 10px;display: none;}
+			#menuPageTip:hover #menuPage{top:10px;}
+            #menuPage li { float: left; margin:  0 10px 0 0; font-size: 14px;}
+            #menuPage a { float: left; padding: 4px 10px; background-color: #fff; color: #333; text-decoration: none;font-size: 12px;transition: all .5s}
+            #menuPage .active a,#menuPage a:hover { color: #fff; background-color: #333;}
+			/*#menuPage a:hover{background-color: #sss}*/
+			.fixSec5{position: fixed;bottom: 100px;right: 100px;opacity: 0;display: none}
+			.fixSec5.showToggle3{animation:sec5 8s ;}
+			.fixSec5 a{color: #e04242;font-weight: bold;cursor: none}
+			.section{overflow: hidden}
+
+			.scale-linear{transform:scale(1);filter: blur(5px);animation:scale-linear  40s linear infinite}
+
+			/*.fuzzy {*/
+				/*filter: blur(5px);*/
+				/*animation: blur-linear 4s infinite;*/
+			/*}*/
+			@keyframes scale-linear {
+				0%{transform:scale(1);filter: blur(5px);}
+				50%{transform:scale(1.2);filter: blur(0px);}
+				100%{transform:scale(1);filter: blur(5px);}
+			}
+			@keyframes blur-linear {
+				0%{blur(0px)}
+				50%{blur(5px)}
+				100%{blur(0px)}
+			}
+			@keyframes sec5 {
+				0% {opacity: 1}
+				10% {opacity: 0}
+				20% {opacity: 1}
+				40% {opacity: 0}
+				60% {opacity: 1}
+				100% {opacity: 0}
+			}
+
+			.fixBtn{
+				position: fixed;
+				bottom: 50px;
+				right: 100px;
+			}
+			.fixBtn a{
+				color: #b729cf;
+				font-weight: bold;
+			}
+
+			.gomyblog {
+				display:inline-block;
+				animation:lol 2s infinite;
+
+			}
+			@keyframes lol {
+				0% {transform:rotate(0deg)}
+				33% {transform:rotate(30deg)}
+				66% {transform:rotate(0deg)}
+				100% {transform:rotate(-30deg)}
+			}
+			.words p,.time-changecolor {
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-size: 200% 120%;
+				background-image: -webkit-linear-gradient(left, #df21f5, #87ceeb 25%, orange 50%, #000a80 75%, #df21f5);
+				animation: content-animation 6s infinite linear
+			}
+			.section:nth-child(8) .words p{
+				background-image: -webkit-linear-gradient(left, #e8230c, #0fe83e 25%, #0b25ef 50%, orange 75%, #f06555);
+			}
+			.section:nth-child(7) .words p{
+				background-image: -webkit-linear-gradient(left, #f06555, #0fe83e 25%, orange 50%, #e8230c 75%, #f06555);
+			}
+			.section:nth-child(6) .words p{
+				background-image: -webkit-linear-gradient(left, #df21f5, orange 25%, #87ceeb 50%, #000a80 75%, #df21f5);
+			}
+			.section:nth-child(5) .words p{
+				background-image: -webkit-linear-gradient(left, #e8230c, #0fe83e 25%, orange 50%, #f06555 75%, #f06555);
+			}
+			.section:nth-child(4) .words p{
+				background-image: -webkit-linear-gradient(left, #df21f5, #87ceeb 25%, orange 50%, #000a80 75%, #df21f5);
+			}
+			.section:nth-child(3) .words p{
+				background-image: -webkit-linear-gradient(left, #f06555, #0fe83e 25%, orange 50%, #e8230c 75%, #f06555);
+			}
+			.section:nth-child(2) .words p{
+				background-image: -webkit-linear-gradient(left, #e8230c, #0fe83e 25%, orange 50%, #0b25ef 75%, #f06555);
+			}
+
+			@keyframes content-animation {
+				0% {
+					background-position: 0, 0
+				}
+				100% {
+					background-position: -100% 0
+				}
+			}
+			.five.words{
+				width: auto;
+				padding-right: 0;
+			}
+        </style>
+
+	</head>
+
+	<body>
+		<audio src="" autoplay loop></audio>
+		<div id="fullpage">
+			<div class="section sec1">
+				<div id="main">
+
+					<div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a
+							href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a
+							href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。
+					</div>
+
+					<div id="wrap">
+
+						<div id="text">
+
+							<div id="code">
+
+								<font color="#FF0000"> <span class="say">第一次却怦然心动。</span><br>
+
+									<span class="say"> 遇见你是我今生最美丽的相遇。</span><br>
+
+									<span class="say"> </span><br>
+
+									<span class="say">一直想说，无论走到哪里，最想去的，还是你的身边。 </span><br>
+
+
+									<span class="say">日子过得很快，生活中的点点滴滴却深刻在我们的心中。</span><br>
+
+									<span class="say"></span><br>
+									<span class="say">我相信我们的相遇，会有不同的人生。</span><br>
+									<span class="say"></span><br>
+
+									<span class="say">
+你在，我在，就算是海枯石烂。
+没有过多的华丽，只因一句我喜欢你，却牵挂于心千日。</span><br>
+									<span class="say"></span><br>
+
+
+									<span class="say">亲，你知道吗?哪怕再苦再累，都会把最好的留给你。</span><br>
+									<span class="say">
+有的人你只看了一眼，却影响了一生。
+</span><br>
+									<span class="say"> </span><br>
+
+									<span class="say"><span class="space"></span> -- 牵挂你的刘伟波--</span>
+
+								</font></p>
+
+							</div>
+
+						</div>
+
+						<div id="clock-box">
+
+							<span class="STYLE1"></span><font color="#33CC00">亲爱的糖宝，我们相识</font>
+
+							<span class="STYLE1" style="color: #ad9494">已经……</span>
+
+							<div id="clock" class="time-changecolor"></div>
+
+						</div>
+
+						<canvas id="canvas" width="1100" height="680"></canvas>
+
+					</div>
+
+
+				</div>
+				<div id="font1" class="words" style="color:#000;display: none">
+					<p class="tagline changecolor">虽然</p>
+					<p class="tagline changecolor">每次说喜欢你的时候</p>
+					<p class="tagline changecolor">你总是拒绝我</p>
+					<p class="tagline changecolor">我问过自己无数个为什么</p>
+					<p class="tagline changecolor">我知道</p>
+					<p class="tagline changecolor">你是怕我没有用真心</p>
+					<p class="tagline changecolor">所以我用实际行动证明</p>
+					<p class="tagline changecolor">证明你在我心中的位置</p>
+					<p class="tagline changecolor">但是</p>
+					<p class="tagline changecolor">在我心中，永远不够证明……</P>
+				</div>
+				<!--<div class="down"><samp></samp></div>-->
+			</div>
+			<div class="section">
+				<img class="fuzzy scale-linear" src="image/yejing.jpg" />
+				<div class="words">
+					<p class="changecolor">未来很长</p>
+					<p class="changecolor">我很怕</p>
+					<p class="changecolor">我很怕 突然有一天</p>
+					<p class="changecolor">听到了一个噩耗</p>
+					<p class="changecolor">那就是你要结婚了</p>
+					<p class="changecolor">我非常怕</p>
+				</div>
+				<!--<div class="down"><samp></samp></div>-->
+			</div>
+			<div class="section">
+				<img class="fuzzy scale-linear" src="image/xingkong.jpg" />
+				<div class="words">
+					<p class="changecolor">虽然我知道</p>
+					<p class="changecolor">我的差距现在很大</p>
+					<p class="changecolor">但是我的潜力，却是无穷</p>
+					<p class="changecolor">未来很长，希望有一双支持我的小手</p>
+					<p class="changecolor">在我累的时候，给我点个赞</p>
+				</div>
+				<!--<div class="down"><samp></samp></div>-->
+			</div>
+			<div class="section">
+				<img class="fuzzy scale-linear" src="image/lufei1.jpg" />
+				<div class="words">
+					<p>我在等那么一天</p>
+					<p>等我足够优秀</p>
+					<p>踏着七彩云彩</p>
+					<p>坚定地落在你面前</p>
+					<p>娶你做我的妻子</p>
+				</div>
+				<!--<div class="down"><samp></samp></div>-->
+			</div>
+			<div class="section sec2" style="overflow: hidden">
+                <div id="screen">
+
+                    <div id="command" >
+
+
+
+                        <h1>deliberate lies</h1>
+
+                        <span>Do you have a map? Because I just keep losting in your eyes!</span>
+
+                        <div id="bar" title="按住可拖动"></div>
+
+                    </div>
+
+                    <div id="urlInfo"></div>
+
+                </div>
+				<div class="words">
+					<p>在一起总是那么美好</p>
+					<p>总希望能在最美好的年华，留下最美的你</p>
+					<p>即使很落魄</p>
+					<p>即使很现实</p>
+					<p>但我知道</p>
+					<p>勤劳的我，我相信拼搏不久好日子就会来</p>
+				</div>
+				<!--<div class="down"><samp></samp></div>-->
+			</div>
+			<div class="section">
+				<img class="fuzzy scale-linear" src="image/jiewen.jpg" />
+				<div class="words">
+					<p class="tagline">一句晚安 </p>
+					<p class="tagline">可能只是一个问候语 </p>
+					<p class="tagline">但在我心中却不一样 </p>
+					<p class="tagline">我只对你一个人说过</p>
+				</div>
+				<!--<div class="down"><samp></samp></div>-->
+			</div>
+			<div class="section">
+				<img class="fuzzy scale-linear" src="image/hangzhou.jpg" />
+				<div class="words">
+					<p>我想去</p>
+					<p>我想去你在的城市</p>
+					<p>去陪你一起欣赏路边的风景</p>
+					<p>去陪你一起在街道散步</p>
+					<p>去陪你一起品尝美食</p>
+				</div>
+				<!--<div class="down"><samp></samp></div>-->
+			</div>
+			<div class="section sec5">
+				<div class="five words">
+					<div>
+						<p>虽然我现在</p>
+						<p>没车，没房，没存款</p>
+						<p>但是我潜力大</p>
+						<p>知道拼搏</p>
+						<p>有一颗爱你的心</p>
+						<p>为了今后的幸福</p>
+						<p>我会永远努力下去</p>
+						<p>永远！</p>
+					</div>
+				</div>
+				<!--<div class="down"><samp></samp></div>-->
+				<iframe id="sec8Iframe" src="" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+			</div>
+		</div>
+		<div id="menuPageTip">
+
+			<ul id="menuPage" >
+				<li data-menuanchor="page1" class="active"><a href="#page1">第一屏</a></li>
+				<li data-menuanchor="page2"><a href="#page2">第二屏</a></li>
+				<li data-menuanchor="page3"><a href="#page3">第三屏</a></li>
+				<li data-menuanchor="page4"><a href="#page4">第四屏</a></li>
+				<li data-menuanchor="page5"><a href="#page5">第五屏</a></li>
+				<li data-menuanchor="page6"><a href="#page6">第六屏</a></li>
+				<li data-menuanchor="page7"><a href="#page7">第七屏</a></li>
+				<li data-menuanchor="page8"><a href="#page8">第八屏</a></li>
+			</ul>
+		</div>
+		<div class="fixBtn">
+			<!--<a id="prev" href="#page1">上一个</a>-->
+			<a style="display:none;"  id="next" class="gomyblog" href="#page2" data-letterfx="custom[0]">看下一个》》》</a>
+		</div>
+		<div class="fixSec5">
+			<a href="javascript:;">点击照片看看</a>
+		</div>
+
+        <script src="js/love/love1.js"></script>
+        <script src="js/tb/tb.js"></script>
+
+
+        <!--<script src="js/3d/trackballcontrols.js"></script>-->
+        <!--<script src="js/3d/css3drenderer.js"></script>-->
+		<script>
+            $("#next").click(function () {
+                var nowUrl=location.href;
+                var lastStr=nowUrl.charAt(nowUrl.length-1);
+                if(lastStr==='l' || lastStr==='/')lastStr='1';
+				var n=parseInt(lastStr)+1;
+				if(n>=8){
+                    n=8;
+                    $('#next').fadeOut(500);
+                    setTimeout(function () {
+                        $("#menuPageTip").show();
+                    },5000)
+				}
+                $(this).attr('href','#page'+n)
+            });
+
+
+            $("#menu .hide-words").click(function () {
+                $(".five.words").fadeOut(500)
+            })
+
+		</script>
+
+	</body>
+</html>
