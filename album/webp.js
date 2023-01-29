@@ -56,7 +56,7 @@ function getFileHash (filePath) {
 // console.log(getHashJson(resolve('./hash.json')))
 function createWebp (inputImage, outputImage, option = 80) {
   return new Promise((resolve, reject) => {
-    webp.cwebp(inputImage, outputImage, `-q ${option}`)
+    webp.cwebp(inputImage, outputImage, `-q ${option === 20 ? 0.01 : option}`)
       .then(res => {
         console.log('res:', res, inputImage)
         resolve()
