@@ -33,9 +33,20 @@
 	<script src="js/3d/tween.min.js"></script>
 	<script src="js/3d/jquery-viewer.min.js"></script>
 
+	<style>
+		#high-mode{
+			position: absolute;
+			top: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #2e2a2a;
+			z-index: 100;
+		}
+	</style>
 </head>
 
 <body>
+<div id="high-mode" data-mode="simple" style="display: none">缩略模式</div>
 <div id="container"></div>
 <div id="menu">
 	<button id="table">长相厮守</button>
@@ -47,6 +58,25 @@
 
 
 
+<script>
+	if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+		// 当前设备是移动设备
+		// $('#high-mode').hide()
+	}
+	setTimeout(() => {
+		$('#high-mode').show()
+	}, 10000);
+	$('#high-mode').on('click', function () {
+		const mode = $(this).attr('data-mode')
+		if (mode === 'high') {
+			$(this).attr('data-mode', 'simple')
+			$(this).text('缩略模式')
+		} else {
+			$(this).attr('data-mode', 'high')
+			$(this).text('高清模式')
+		}
+	})
+</script>
 <script src="js/3d/trackballcontrols.js"></script>
 <script src="js/3d/css3drenderer.js"></script>
 <script src="js/3d/viewer.min.js"></script>

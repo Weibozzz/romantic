@@ -158,7 +158,8 @@ function init() {
 
         $image.viewer({
             url() {
-                return newSrc;
+                const mode = $('#high-mode').attr('data-mode')
+                return mode === 'high' ? newSrc : $image.attr('src');
             },
             initialCoverage: 0.9,
             navbar: false,
@@ -166,7 +167,12 @@ function init() {
             title: false,
             toolbar: false,
             viewed: function() {
-                $image.viewer('zoomTo', 1);
+                if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+                    // 当前设备是移动设备
+                    $image.viewer('zoomTo', 0.1);
+                    return;
+                }
+                $image.viewer('zoomTo', 0.5);
             }
         });
 		// element.style.backgroundColor = 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')';
