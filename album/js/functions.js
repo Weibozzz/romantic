@@ -56,7 +56,7 @@ function timeElapse(date){
 		seconds = "0" + seconds;
 	}
 
-    diffTime(new Date('2022-2-9 00:00:00'),new Date());
+    diffTime(new Date('2022/2/9 00:00:00'),new Date());
 
 }
 function diffTime(startDate,endDate) {
